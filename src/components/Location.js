@@ -1,6 +1,8 @@
 import React from "react";
 
-const Location = ({ address, lat, lng }) => (
+const Location = ({
+  location: { lat, lng, number, street, city, district, state, zipCode }
+}) => (
   <div className="row">
     <div className="col s12 l10 offset-l1">
       <div className="card">
@@ -16,27 +18,27 @@ const Location = ({ address, lat, lng }) => (
             <tbody>
               <tr>
                 <td>logradouro</td>
-                <td>{address.logradouro}</td>
+                <td>{street}</td>
               </tr>
               <tr>
                 <td>número</td>
-                <td>{address.numero}</td>
+                <td>{number}</td>
               </tr>
               <tr>
                 <td>bairro</td>
-                <td>{address.bairro}</td>
+                <td>{district}</td>
               </tr>
               <tr>
                 <td>cidade</td>
-                <td>{address.cidade}</td>
+                <td>{city}</td>
               </tr>
               <tr>
                 <td>estado</td>
-                <td>{address.estado}</td>
+                <td>{state}</td>
               </tr>
               <tr>
                 <td>CEP</td>
-                <td>{address.cep}</td>
+                <td>{zipCode}</td>
               </tr>
             </tbody>
           </table>

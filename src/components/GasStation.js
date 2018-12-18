@@ -5,17 +5,17 @@ const GasStation = ({ gasStation }) => (
     <div className="card-content">
       <span className="card-title">
         <i className="material-icons left">local_gas_station</i>
-        {gasStation.nome}
+        {gasStation.name}
       </span>
       <p>
         lat : {gasStation.lat}, lng: {gasStation.lng}
       </p>
       <a
-        href={`https://maps.google.com/?q=${gasStation.endereco}`}
+        href={`https://maps.google.com/?q=${gasStation.address}`}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {gasStation.endereco}
+        {gasStation.address}
       </a>
     </div>
   </div>
