@@ -7,7 +7,7 @@ import { ApolloProvider } from "react-apollo";
 
 // Pass your GraphQL endpoint to uri
 const client = new ApolloClient({
-  uri: "https://findgas-graphql.now.sh/"
+  uri: process.env.REACT_APP_GRAPHQL_URI
 });
 
 const ApolloApp = (
